@@ -1,0 +1,83 @@
+
+.sidebar {
+  background-color: #2563eb;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.sidebar svg {
+  fill: white;
+}
+
+svg {
+  width: 24px;
+}
+
+.right-side-header img,
+.username img {
+  width: 74px;
+  height: 74px;
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.buttons button {
+  color: aliceblue;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #1d4ed8;
+}
+
+#search-bar {
+  background-color: #94a3b8;
+  border-radius: 7px;
+  border: none;
+  padding: 5px;
+  width: 70%;
+}
+
+#search-bar:focus {
+  border-color: #94a3b8;
+  color: aliceblue;
+}
+
+.main-content {
+  background-color: #cbd5e1;
+}
+
+/* CSS Styling for the Trending Section */
+.trending-section img {
+  width: 74px;
+  height: 74px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+#tegan img {
+  background-color: teal;
+}
+
+#morgan img {
+  background-color: yellow;
+}
+
+#kendall img {
+  background-color: orange;
+}
+
+#alex img {
+  background-color: pink;
+}
+
+/* The following section is for styling the cards */
+
+.card-item {
+  border-left: 6px solid orange;
+  border-radius: 8px;
+  padding: 30px 25px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
