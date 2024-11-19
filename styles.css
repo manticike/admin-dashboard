@@ -1,83 +1,269 @@
+General Styles
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f7fa;
+}
 
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #cbd5e1;
+  --accent-color: orange;
+  --text-color: grey;
+  --icon-color: white;
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr 250px;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+}
+
+
+/* Sidebar */
 .sidebar {
-  background-color: #2563eb;
+  background-color: #1976d2;
   color: white;
-  font-size: 2rem;
-  font-weight: 600;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-left-items svg {
+  height: 24px;
+  width: 24px;
+  fill: var(--icon-color);
 }
 
-.sidebar svg {
-  fill: white;
+.sidebar-left-items {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-svg {
+.sidebar h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+  font-size: 1em;
+}
+
+.sidebar nav a:hover {
+  background-color: var(--primary-color);
+}
+
+.help-section {
+  margin-top: 50px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+/* Profile Section */
+.profile-section {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--icon-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-info img.profile-pic {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+.profile-section img {
+  width: 40px;
+  height: 40px;
+}
+
+.actions button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #03a9f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: #0288d1;
+}
+
+/*Beginning of profile section layout*/
+
+.profile-section {
+  display: grid;
+  grid-template-rows: auto auto; /* Two rows */
+  row-gap: 1rem; /* Space between rows */
+  padding: 1rem;
+}
+
+.search-bar-section {
+  grid-row: 1; /* Place in the first row */
+}
+
+.search-bar-section svg {
   width: 24px;
 }
 
-.right-side-header img,
-.username img {
-  width: 74px;
-  height: 74px;
-  background-color: yellow;
-  border-radius: 50%;
-}
-
-.buttons button {
-  color: aliceblue;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
-  text-align: center;
-  background-color: #1d4ed8;
-}
-
 #search-bar {
-  background-color: #94a3b8;
-  border-radius: 7px;
+  border-radius: 8px;
   border: none;
-  padding: 5px;
-  width: 70%;
+  background-color: var(--secondary-color);
+  width: 80%;
 }
 
-#search-bar:focus {
-  border-color: #94a3b8;
-  color: aliceblue;
+.right-side-header {
+  grid-row: 1; /* Place in the first row */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end; /* Align to the right */
 }
 
-.main-content {
-  background-color: #cbd5e1;
+.profile-info,
+.actions {
+  grid-row: 2; /* Place in the second row */
 }
 
-/* CSS Styling for the Trending Section */
-.trending-section img {
-  width: 74px;
-  height: 74px;
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start; /* Adjust as needed */
+}
+
+
+/* End of profile section*/
+
+/* Projects Section */
+
+.projects-section {
+  background-color: var(--secondary-color);
+  padding: 10px;
+}
+
+.projects-section h3 {
+  margin: 0 0 10px;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 8px solid yellow;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card > p {
+  color: var(--text-color);
+}
+
+.card svg {
+  width: 24px;
+  height: 24px;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+  padding: 20px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.announcements, .trending {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.announcement, .trend {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.announcement:last-child, .trend:last-child {
+  border-bottom: none;
+}
+
+.right-sidebar p {
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+
+.trending img {
+  width: 40px;
+  height: 40px;
   padding: 10px;
   border-radius: 50px;
 }
 
-#tegan img {
-  background-color: teal;
+.trend {
+  display: flex;
 }
 
-#morgan img {
-  background-color: yellow;
+#tegan {
+  background-color: rgb(136, 209, 209);
 }
 
-#kendall img {
+#morgan {
   background-color: orange;
 }
 
-#alex img {
+#kendall {
   background-color: pink;
 }
 
-/* The following section is for styling the cards */
-
-.card-item {
-  border-left: 6px solid orange;
-  border-radius: 8px;
-  padding: 30px 25px;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+#alex {
+  background-color: grey;
 }
